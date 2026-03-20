@@ -1,0 +1,6 @@
+We are looking for a Python Developer with experience in:
+- Machine Learning
+- LangChain
+- Vector Databases
+- OpenAI API
+- FAISS

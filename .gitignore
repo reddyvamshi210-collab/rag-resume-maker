@@ -1,4 +1,32 @@
-venv/
-__pycache__/
+# Environment
 .env
-*.pyc
+.env.*
+!.env.example
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data (keep sample JD, but ignore user-uploaded resumes)
+data/resume.pdf
+data/uploads/
+
+# FAISS index artifacts
+*.faiss
+*.pkl

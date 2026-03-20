@@ -1,8 +1,25 @@
-langchain
-langchain-openai
-langchain-community
-openai
-faiss-cpu
-tiktoken
-pypdf
-python-dotenv
+# Core RAG pipeline
+langchain>=0.1.16,<0.4
+langchain-openai>=0.1.6,<0.4
+langchain-community>=0.0.34,<0.4
+openai>=1.24.0,<2
+faiss-cpu>=1.7.4,<2
+tiktoken>=0.6.0,<1
+pypdf>=4.2.0,<5
+python-dotenv>=1.0.1,<2
+
+# Document handling
+python-docx>=1.1.0,<2
+docx2txt>=0.8,<1
+reportlab>=4.1,<5
+
+# Web UI
+streamlit>=1.32.2,<2
+
+# API (Vercel deployment)
+fastapi>=0.110,<1
+uvicorn>=0.29,<1
+python-multipart>=0.0.7,<1
+
+# Testing
+pytest>=8.0,<10
