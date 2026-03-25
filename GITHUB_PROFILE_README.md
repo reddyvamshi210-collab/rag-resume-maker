@@ -19,7 +19,7 @@ class VamshiReddy:
         self.role = "AI/ML Engineer & Full Stack Developer"
         self.languages = ["Python", "JavaScript", "SQL"]
         self.interests = ["RAG Pipelines", "LLMs", "NLP", "GenAI"]
-        self.current_project = "RAG Resume Matcher 🎯"
+        self.current_project = "AI Resume Matcher 🎯"
         self.fun_fact = "I build AI that reads resumes better than humans"
     
     def say_hi(self):
@@ -78,8 +78,8 @@ me.say_hi()
 
 <div align="center">
 
-<a href="https://github.com/reddyvamshi210-collab/rag-resume-maker">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=reddyvamshi210-collab&repo=rag-resume-maker&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff&text_color=c9d1d9" />
+<a href="https://github.com/reddyvamshi210-collab/ai-resume-matcher">
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=reddyvamshi210-collab&repo=ai-resume-matcher&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff&text_color=c9d1d9" />
 </a>
 
 </div>
@@ -91,7 +91,7 @@ me.say_hi()
 <td align="center" width="50%">
 
 ### 🧠 Project 1: RAG Pipeline
-**Simple RAG Resume Matcher**
+**Simple RAG Pipeline**
 
 A foundational ML pipeline that loads resumes, chunks documents, builds FAISS vector embeddings, and uses LLM-powered semantic analysis to evaluate resume-to-job fit.
 

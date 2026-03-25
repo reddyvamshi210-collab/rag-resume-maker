@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:161b22,100:1f6feb&height=180&section=header&text=RAG%20Resume%20Matcher&fontSize=42&fontColor=58a6ff&animation=fadeIn&fontAlignY=32&desc=AI-Powered%20Resume%20Optimization%20Platform&descSize=16&descColor=8b949e&descAlignY=52" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:161b22,100:1f6feb&height=180&section=header&text=AI%20Resume%20Matcher&fontSize=42&fontColor=58a6ff&animation=fadeIn&fontAlignY=32&desc=AI-Powered%20Resume%20Optimization%20Platform&descSize=16&descColor=8b949e&descAlignY=52" width="100%" />
 
 <br>
 
@@ -23,15 +23,15 @@ This repository contains **two ML projects** built around intelligent resume ana
 | # | Project | Description | Entry Point |
 |---|---------|-------------|-------------|
 | **1** | **Simple RAG Pipeline** | Foundational RAG demo — loads a resume + job description, chunks documents, builds a FAISS vector store, and uses an LLM to analyze resume-JD fit | `app.py` / `cli.py` |
-| **2** | **Full-Featured AI Resume Suite** | Production-ready web app with ATS scoring, keyword analysis, gap analysis, resume tailoring, and cover letter generation — deployed on Render & Vercel | `frontend/app.py` / `api/index.py` |
+| **2** | **Full AI Resume Matcher Suite** | Production-ready web app with ATS scoring, keyword analysis, gap analysis, resume tailoring, and cover letter generation — deployed on Render & Vercel | `frontend/app.py` / `api/index.py` |
 
-Both projects share the same `backend/` module, demonstrating progression from a basic RAG pipeline to a complete AI-powered resume optimization platform.
+Both projects share the same `backend/` module, demonstrating progression from a basic RAG pipeline to the complete AI Resume Matcher platform.
 
 ---
 
 ## 🚀 Features
 
-### Project 1 — Simple RAG Resume Matcher
+### Project 1 — RAG Pipeline (Foundation)
 
 - Load resume (PDF/DOCX) and job description (TXT/MD)
 - Split documents into optimized chunks (800 tokens, 100 overlap)
@@ -40,7 +40,7 @@ Both projects share the same `backend/` module, demonstrating progression from a
 - Query via LangChain `RetrievalQA` chain for fit analysis
 - CLI support with `--resume` and `--jd` arguments
 
-### Project 2 — Full AI Resume Optimization Suite
+### Project 2 — AI Resume Matcher (Full Suite)
 
 <table>
 <tr>
@@ -101,7 +101,7 @@ Both projects share the same `backend/` module, demonstrating progression from a
 ## 🏗️ Architecture
 
 ```
-rag-resume-maker/
+ai-resume-matcher/
 │
 ├── app.py                  # Project 1: Simple RAG pipeline demo
 ├── cli.py                  # Project 1: CLI interface (--resume, --jd)
@@ -177,8 +177,8 @@ rag-resume-maker/
 ### 1. Clone & Install
 
 ```bash
-git clone https://github.com/reddyvamshi210-collab/rag-resume-maker.git
-cd rag-resume-maker
+git clone https://github.com/reddyvamshi210-collab/ai-resume-matcher.git
+cd ai-resume-matcher
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
