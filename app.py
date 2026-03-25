@@ -1,22 +1,15 @@
+"""CLI entry point for AI Resume Matcher — runs analysis from data/ files."""
 import os
-import os
-
-print("Resume size:", os.path.getsize("data/resume.pdf"))
-print("JD size:", os.path.getsize("data/job_description.txt"))
 import logging
 from dotenv import load_dotenv
 
-# LangChain imports
-from langchain_openai import ChatOpenAI
-from langchain_community.vectorstores import FAISS
-
 # Your project modules
-from src.loader import load_resume, load_job_description
-from src.splitter import split_documents
-from src.embeddings import get_embeddings
-from src.vectorstore import create_vectorstore
-from src.retriever import get_retriever
-from src.rag_chain import build_rag_chain
+from backend.loader import load_resume, load_job_description
+from backend.splitter import split_documents
+from backend.embeddings import get_embeddings
+from backend.vectorstore import create_vectorstore
+from backend.retriever import get_retriever
+from backend.rag_chain import build_rag_chain
 
 
 # ----------------------------
@@ -67,10 +60,10 @@ def main():
         query = "Analyze how well this resume matches the job description. Give match score and missing skills."
 
         logging.info("Generating analysis...")
-        response = rag_chain.invoke({"input": query})
+        response = rag_chain.invoke({"query": query})
 
         print("\n================ RAG ANALYSIS ================\n")
-        print(response["answer"])
+        print(response.get("result") or response.get("answer", ""))
         print("\n=============================================\n")
 
     except Exception as e:

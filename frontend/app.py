@@ -1,6 +1,10 @@
 """Streamlit web interface for AI Resume Matcher."""
+import sys
 import tempfile
 from pathlib import Path
+
+# Ensure the project root is on sys.path so 'backend' is importable
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import streamlit as st
 
@@ -60,17 +64,15 @@ def render_sidebar():
 
         st.markdown("### 📎 Upload Resume")
         resume_file = st.file_uploader(
-            "PDF or DOCX",
+            "Upload your resume (PDF or DOCX)",
             type=["pdf", "docx"],
-            label_visibility="collapsed",
         )
 
         st.markdown("### 📝 Job Description")
         jd_input_method = st.radio(
-            "Input method",
+            "Choose input method",
             ["Paste text", "Upload file"],
             horizontal=True,
-            label_visibility="collapsed",
         )
 
         jd_text_input = ""
@@ -80,13 +82,11 @@ def render_sidebar():
                 "Paste the job description here",
                 height=200,
                 placeholder="Paste the full job description...",
-                label_visibility="collapsed",
             )
         else:
             jd_file = st.file_uploader(
-                "TXT or MD file",
+                "Upload JD file (TXT or MD)",
                 type=["txt", "md"],
-                label_visibility="collapsed",
             )
 
         st.markdown("---")
@@ -280,7 +280,8 @@ def render_results(resume_text: str, jd_text: str, inputs: dict):
             response = rag_chain.invoke({"query": query})
 
         st.markdown("### 📊 AI Gap Analysis")
-        st.markdown(response["result"])
+        answer = response.get("result") or response.get("answer", "")
+        st.markdown(answer)
 
         source_docs = response.get("source_documents", [])
         if source_docs:
