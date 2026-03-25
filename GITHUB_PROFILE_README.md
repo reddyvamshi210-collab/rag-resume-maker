@@ -78,8 +78,8 @@ me.say_hi()
 
 <div align="center">
 
-<a href="https://github.com/reddyvamshi210-collab/ai-resume-matcher">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=reddyvamshi210-collab&repo=ai-resume-matcher&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff&text_color=c9d1d9" />
+<a href="https://github.com/reddyvamshi210-collab/AI-RESUME-MATCHER">
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=reddyvamshi210-collab&repo=AI-RESUME-MATCHER&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff&text_color=c9d1d9" />
 </a>
 
 </div>

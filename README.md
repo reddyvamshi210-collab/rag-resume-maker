@@ -177,8 +177,8 @@ ai-resume-matcher/
 ### 1. Clone & Install
 
 ```bash
-git clone https://github.com/reddyvamshi210-collab/ai-resume-matcher.git
-cd ai-resume-matcher
+git clone https://github.com/reddyvamshi210-collab/AI-RESUME-MATCHER.git
+cd AI-RESUME-MATCHER
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
